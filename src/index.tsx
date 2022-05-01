@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AppContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='/react-recipes'>
         <App/>
       </BrowserRouter>
     </AppContextProvider>
