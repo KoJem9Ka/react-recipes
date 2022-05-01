@@ -1,0 +1,39 @@
+@import "src/STYLES/colors";
+
+$indent : .9rem;
+
+.GoodCard {
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  padding         : $indent;
+  cursor          : pointer;
+  transition      : all .3s ease;
+  text-align      : center;
+  color           : white;
+  border-radius   : 10px;
+  background      : $card-accent-gradient;
+
+  img {
+    width         : 100%;
+    height        : auto;
+    border-radius : .5rem;
+  }
+
+  & > * + * {
+    margin : $indent $indent 0;
+  }
+
+  &:hover {
+    transform : scale(1.05);
+  }
+
+  @media (max-width : 600px) {
+    $indent : .5rem;
+    padding : $indent;
+    & > * + * {
+      margin : $indent $indent 0;
+    }
+
+  }
+}

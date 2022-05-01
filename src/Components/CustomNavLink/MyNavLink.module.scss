@@ -1,0 +1,18 @@
+.CustomNavLink {
+
+  padding       : .5rem 1rem;
+  border-radius : 1rem;
+
+  &.active{
+    color : #ff6464;
+  }
+
+  &:hover {
+    background : rgba(255, 255, 255, .1);
+    filter     : alpha(.7);
+  }
+
+  @media (max-width : 600px){
+    padding : .1rem .4rem;
+  }
+}

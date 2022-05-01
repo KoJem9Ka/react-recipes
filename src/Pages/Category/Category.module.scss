@@ -1,0 +1,5 @@
+@import "src/STYLES/result-grids";
+
+.Category {
+  @extend .resultsGrids;
+}

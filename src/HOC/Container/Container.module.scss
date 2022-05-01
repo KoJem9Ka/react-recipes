@@ -1,0 +1,11 @@
+//Container
+.container {
+  width     : calc((241 / 380) * 100% + 2400px / 19);
+  max-width : 1536px;
+  margin    : 0 auto;
+}
+
+.h2Style {
+  font-size  : 3rem;
+  text-align : center;
+}

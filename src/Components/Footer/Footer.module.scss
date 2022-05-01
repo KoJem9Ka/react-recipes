@@ -1,0 +1,12 @@
+@import "src/STYLES/colors";
+
+footer {
+  color      : $text-heads;
+  border-top : 1px solid $header-stroke;
+  background : $header-bg;
+
+  .footerInner {
+    display         : flex;
+    justify-content : space-between;
+  }
+}

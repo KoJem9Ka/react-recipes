@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Categories from './Pages/Categories/Categories'
+import './STYLES/App.scss'
+import BasicHeaderFooter from './Layout/BasicHeaderFooter'
+import NotFoundPage from './Pages/NotFoundPage'
+import AboutPage from './Pages/AboutPage'
+import Category from './Pages/Category/Category'
+import Meal from './Pages/Meal/Meal'
+import SearchPage from './Pages/SearchPage/SearchPage'
+
+//TODO: Поиск на главной
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route element={<BasicHeaderFooter/>} path='/'>
+          <Route element={<Categories/>} index/>
+          <Route element={<Category/>} path='category/:name'/>
+          <Route element={<Meal/>} path='meal/:id'/>
+          <Route element={<SearchPage/>} path='search'/>
+          <Route element={<AboutPage/>} path='about'/>
+          <Route element={<NotFoundPage/>} path='*'/>
+        </Route>
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App

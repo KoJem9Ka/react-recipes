@@ -1,0 +1,52 @@
+@import "src/STYLES/colors";
+
+
+.SearchMeal {
+  display       : flex;
+  overflow      : hidden;
+  flex-grow     : 1;
+  //justify-content : stretch;
+  box-sizing    : border-box;
+  min-width     : 140px;
+  max-width     : 20rem;
+  margin-left   : auto !important;
+  border        : 1px solid $button2-color;
+  border-radius : .5rem;
+
+  & > * {
+    font-size  : 1rem;
+    color      : $text-0;
+    border     : none;
+    background : $header-search-bg;
+  }
+
+  input {
+    flex-grow : 1;
+    width     : 1px;
+    padding   : .5rem 1rem;
+  }
+
+
+  button {
+    padding : .5rem .5rem;
+    cursor  : pointer;
+
+    &:first-child {
+      padding      : 0 .8rem;
+      border-right : 1px solid $header-stroke;
+    }
+
+    &:last-child {
+      border-left : 1px solid $header-stroke;
+
+      @media (max-width : 600px) {
+        display : none;
+      }
+    }
+
+    &:hover {
+      background : $header-stroke;
+    }
+  }
+
+}

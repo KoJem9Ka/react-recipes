@@ -1,0 +1,12 @@
+@import "src/STYLES/result-grids";
+
+.SearchPage {
+
+  h2 {
+    margin-bottom : 1rem;
+  }
+
+  .resultsGrid {
+    @extend .resultsGrids;
+  }
+}
